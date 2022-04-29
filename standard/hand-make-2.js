@@ -4,7 +4,7 @@ function promiseAll(promise) {
     if (!Array.isArray(promise)) {
       throw new TypeError("promiseAll: argument is not an array");
     }
-    var resolveCount = 0;
+    var resolvedCount = 0;
     var promiseNum = promise.length;
     var resolveResult = [];
     for (let i = 0; i < promiseNum; i++) {
