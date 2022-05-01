@@ -76,3 +76,10 @@ function flatten3(arr) {
 function flatten4(arr) {
   return arr.flat(Infinity);
 }
+// or
+function flatten5(arr) {
+  let str = JSON.stringify(arr);
+  str = str.replace(/(\[|\])/g, "");
+  str = "[" + str + "]";
+  return JSON.parse(str);
+}
